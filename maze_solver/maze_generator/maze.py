@@ -36,7 +36,7 @@ class Maze():
     #####  
     
     def display(self, ant_pos=None, reachable=None, ax=None, clear_first=True, 
-                pheromones=None, final_path=None, **kwargs):
+                pheromones=None, final_path=None, save_fig=False, **kwargs):
         """Visualize the maze using matplotlib, optionally overlaying the ant's position and reachable states.
         if ax is provided, it will be used for plotting; otherwise, a new figure will be created.
         Parameters:
@@ -45,6 +45,8 @@ class Maze():
         - ax: matplotlib axis object for plotting
         - clear_first: whether to clear the current figure before plotting
         - pheromones: optional pheromone levels to overlay on the maze
+        - final_path: list of tuples of (row, col) for the final path
+        - save_fig: whether to save the figure as an image
         - kwargs: additional keyword arguments for customization
         """
         
@@ -124,6 +126,10 @@ class Maze():
         
             # Set the title and labels
             ax.set_title("Maze with Ant Path")
+        
+        if save_fig:
+            # Save the figure as an image
+            fig.savefig("example_path.png", bbox_inches='tight')
         
         return fig, ax
     

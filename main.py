@@ -32,13 +32,15 @@ if __name__ == "__main__":
     for step in shortest_path:
         print(f"Step: {step}")
         
-    # plot convergence of shortest path length over steps
+    # Plot convergence of shortest path length over steps
     plt.figure()
     plt.plot(range(1, len(shortest_path_lens) + 1), shortest_path_lens, marker='o')
     plt.xlabel("Step Number")
     plt.ylabel("Shortest Path Length")
     plt.title("Convergence of ACO Algorithm")
     plt.grid(True)
+    # Save the plot
+    plt.savefig("example_output.png")
     plt.show()
 
 ##################################################################

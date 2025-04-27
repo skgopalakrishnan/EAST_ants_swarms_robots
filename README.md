@@ -67,3 +67,11 @@ solution = depth_first_search(maze, start, end)
 print(solution)
 static_plot(solution)
 ```
+
+For example of solution: see the image below:
+
+![Example Path](example_path.png)
+
+For example of convergence, see the image below:
+
+![Example Output](example_output.png)

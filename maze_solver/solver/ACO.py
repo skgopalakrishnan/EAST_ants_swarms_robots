@@ -226,7 +226,12 @@ class ACO:
             if self._early_stop:
                 print("Early stopping condition met. Stopping ACO algorithm.")
                 break
-            
+        
+        # Save the path of the final ant (assuming it converged)
+        self.maze.display(ant_pos=a.pos, reachable=None, ax=self.ax, 
+                          clear_first=True, final_path=a.path, save_fig=True)  # display cleaned final path
+        
+        # Aggregate the results
         output_index = self.shortest_paths_lens.index(min(self.shortest_paths_lens))
         output_path = self.shortest_paths[output_index]
         self.shortest_path_len = self.shortest_paths_lens[output_index]
