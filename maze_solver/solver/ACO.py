@@ -423,7 +423,7 @@ class ACO:
 
 if __name__ == "__main__":
     # Example usage
-    aco = ACO(num_states=100, initial_pheromone=1.0, alpha=1, beta=3, epsilon=0.1,
+    aco = ACO(num_states=100, initial_pheromone=1, alpha=1, beta=3, epsilon=0.1,
               pheromone_deposit=2, evaporation_constant=0.6, type_="maze", width=10, height=10)
     
     print(ACO)

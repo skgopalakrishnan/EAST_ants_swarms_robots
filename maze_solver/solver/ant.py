@@ -204,7 +204,7 @@ class Ant:
     ##### 
     
     @property
-    def pretty_path(self) -> str:
+    def pretty_path(self) -> list:
         """
         Pretty print (get) the path taken by the ant.
         """

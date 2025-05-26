@@ -10,7 +10,7 @@ import random
 if __name__ == "__main__":
     
     # Initialise the maze
-    grid_dimensions = (10, 10)  # Dimensions of the grid
+    grid_dimensions = (5, 5)  # Dimensions of the grid
     num_states = grid_dimensions[0] * grid_dimensions[1]  # Total number of positions
         
     # Set up the ants and the simulation parameters
